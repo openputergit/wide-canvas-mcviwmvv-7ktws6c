@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VCEC - Skill Development Institute</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        .chat-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .chat-box {
+            display: none;
+            width: 300px;
+            height: 400px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <img src="https://vcec.co.in/assets/images/logo.png" alt="VCEC Logo" class="h-12">
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-red-600 hover:text-red-700">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-red-600">About Us</a>
+                    <a href="#centers" class="text-gray-700 hover:text-red-600">Centers</a>
+                    <a href="#contact" class="text-gray-700 hover:text-red-600">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-700">
+                        <i class="bi bi-list text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4">
+            <a href="#home" class="block px-4 py-2 text-red-600 hover:bg-gray-100">Home</a>
+            <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About Us</a>
+            <a href="#centers" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Centers</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h1 class="text-4xl font-bold text-gray-900 mb-4">Transform Your Career with VCEC</h1>
+                    <p class="text-lg text-gray-600 mb-6">Leading skill development institute providing industry-relevant training and certification programs.</p>
+                    <a href="#contact" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition">Get Started</a>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2000" alt="Training" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">About VCEC</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <i class="bi bi-trophy text-4xl text-red-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Industry Excellence</h3>
+                    <p class="text-gray-600">Delivering quality education and training programs aligned with industry standards.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <i class="bi bi-people text-4xl text-red-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Expert Faculty</h3>
+                    <p class="text-gray-600">Learn from experienced professionals and industry experts.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <i class="bi bi-graph-up text-4xl text-red-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Career Growth</h3>
+                    <p class="text-gray-600">Focus on practical skills and career advancement opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Centers Section -->
+    <section id="centers" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Our Centers</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Mumbai Center</h3>
+                    <p class="text-gray-600">123 Mumbai Main Road<br>Maharashtra, India</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Delhi Center</h3>
+                    <p class="text-gray-600">456 Delhi Plaza<br>New Delhi, India</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Bangalore Center</h3>
+                    <p class="text-gray-600">789 Tech Park<br>Karnataka, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Contact Us</h2>
+            <div class="max-w-lg mx-auto">
+                <form id="contact-form" class="space-y-6">
+                    <div>
+                        <label class="block text-gray-700 mb-2">Name</label>
+                        <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Message</label>
+                        <textarea class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot Widget -->
+    <div class="chat-widget">
+        <button id="chat-toggle" class="bg-red-600 text-white p-4 rounded-full shadow-lg">
+            <i class="bi bi-chat-dots text-2xl"></i>
+        </button>
+        <div id="chat-box" class="chat-box">
+            <div class="p-4 bg-red-600 text-white rounded-t-lg">
+                <h3 class="font-semibold">Customer Support</h3>
+            </div>
+            <div id="chat-messages" class="p-4 h-[300px] overflow-y-auto"></div>
+            <div class="p-4 border-t">
+                <input type="text" id="chat-input" placeholder="Type your message..." class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Contact Form Submission
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message. We will get back to you soon!');
+            e.target.reset();
+        });
+
+        // Chatbot functionality
+        const chatToggle = document.getElementById('chat-toggle');
+        const chatBox = document.getElementById('chat-box');
+        const chatInput = document.getElementById('chat-input');
+        const chatMessages = document.getElementById('chat-messages');
+
+        const responses = {
+            "hello": "Hi! How can I help you today?",
+            "courses": "We offer various skill development courses including IT, Management, and Technical training.",
+            "locations": "We have centers in Mumbai, Delhi, and Bangalore.",
+            "contact": "You can reach us at info@vcec.co.in or call us at 1800-XXX-XXXX",
+            "default": "Thank you for your message. Our team will assist you shortly."
+        };
+
+        chatToggle.addEventListener('click', () => {
+            chatBox.style.display = chatBox.style.display === 'none' ? 'block' : 'none';
+        });
+
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && chatInput.value.trim() !== '') {
+                const userMessage = chatInput.value.trim().toLowerCase();
+                
+                // Add user message
+                const userDiv = document.createElement('div');
+                userDiv.className = 'mb-3 text-right';
+                userDiv.innerHTML = `<span class="bg-red-100 text-red-800 px-3 py-2 rounded-lg inline-block">${chatInput.value}</span>`;
+                chatMessages.appendChild(userDiv);
+
+                // Add bot response
+                setTimeout(() => {
+                    const botDiv = document.createElement('div');
+                    botDiv.className = 'mb-3';
+                    let response = responses.default;
+                    for (const [key, value] of Object.entries(responses)) {
+                        if (userMessage.includes(key)) {
+                            response = value;
+                            break;
+                        }
+                    }
+                    botDiv.innerHTML = `<span class="bg-gray-100 text-gray-800 px-3 py-2 rounded-lg inline-block">${response}</span>`;
+                    chatMessages.appendChild(botDiv);
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 500);
+
+                chatInput.value = '';
+            }
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
